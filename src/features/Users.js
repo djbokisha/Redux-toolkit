@@ -16,8 +16,9 @@ export const userSlice = createSlice({
     updateUsername: (state, action) => {
       state.value.map((user) => {
         if (user.id === action.payload.id) {
-        return  user.username = action.payload.username;
+        user.username = action.payload.username;
         }
+        return user;
       });
     },
   },
